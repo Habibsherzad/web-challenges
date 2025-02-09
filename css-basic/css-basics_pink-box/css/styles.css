@@ -9,7 +9,7 @@ body {
 }
 
 /* Put a selector here to select div elements (see index.html). */
-.im-a-pink-box {
+div {
   font-family: cursive;
   padding: 8px;
 
