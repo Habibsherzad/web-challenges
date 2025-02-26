@@ -10,7 +10,11 @@ console.clear();
 */
 
 // --v-- write your code here --v--
-
+const postTitle = "JS Basics";
+const postText = "Simple Introduction for JS Basics";
+let likes = 15;
+const postAuthor = "Habib Rahman Sherzad";
+let isReported = false;
 // --^-- write your code here --^--
 
 /*
@@ -18,5 +22,12 @@ console.clear();
 */
 
 // --v-- write your code here --v--
+console.log("Title: " + postTitle);
+console.log("Text: " + postText);
+console.log("Likes: " + likes);
+console.log("Author: " + postAuthor);
+console.log("Reported: " + isReported);
 
+likes += 1;
+console.log(likes);
 // --^-- write your code here --^--
