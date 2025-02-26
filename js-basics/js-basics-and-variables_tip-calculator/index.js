@@ -14,3 +14,21 @@ based on the cost of the meal and the percentage of the tip.
 
 4. Log a message to the console that includes the meal cost, tip amount, and total cost.
 */
+
+let mealCost = 25;
+let tipPercentage = 0.15;
+
+let tipAmount = mealCost * tipPercentage;
+
+let totalCost = tipAmount + mealCost;
+console.log(
+  "Meal Cost: " +
+    mealCost +
+    " EUR " +
+    "Tip Amount: " +
+    tipAmount +
+    " EUR " +
+    "Total Cost: " +
+    totalCost +
+    " EUR "
+);
