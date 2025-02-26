@@ -247,3 +247,44 @@ CSS based on conditions such as viewport width, etc. */
 /* --- */
 /* Replace this comment with your media query. */
 /* --- */
+
+@media (min-width: 768px) {
+  .card-section {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .product-card {
+    width: 45%;
+  }
+
+  .intro-text {
+    width: 80%;
+    order: -1;
+  }
+
+  .main-footer {
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 1024px) {
+  .navbar {
+    justify-content: space-between;
+    padding: 0 50px;
+  }
+
+  .product-card {
+    width: 30%;
+  }
+
+  .intro-text {
+    width: 60%;
+  }
+
+  .footer-nav {
+    flex-direction: row;
+    gap: 40px;
+  }
+}
