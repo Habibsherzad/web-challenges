@@ -10,6 +10,11 @@ console.clear();
 
 // --v-- write your code here --v--
 
+const title = "Learning Javascript for Smarties";
+const author = "Merle Mak";
+let rating = 5;
+let numberOfSales = 23345;
+
 // --^-- write your code here --^--
 
 /*
@@ -28,6 +33,23 @@ Then:
 
 // --v-- write your code here --v--
 
+// console.log(`Title: ${title}`);
+// console.log("Author: " + author);
+// console.log("Rating: " + rating);
+// console.log("Number of Sales: " + numberOfSales);
+
+logBookData();
+
+numberOfSales = numberOfSales + 1000;
+rating = 7;
+
+// console.log(`Title: ${title}`);
+// console.log("Author: " + author);
+// console.log("Rating: " + rating);
+// console.log("Number of Sales: " + numberOfSales);
+
+logBookData();
+
 // --^-- write your code here --^--
 
 /*
@@ -40,5 +62,15 @@ Then:
 */
 
 // --v-- write your code here --v--
+function logBookData() {
+  console.log(title + ", " + author + ", " + rating + ", " + numberOfSales);
+  // console.log(`${title} ${author} ${rating} ${numberOfSales})
+}
+
+numberOfSales = numberOfSales + 500;
+logBookData();
+
+numberOfSales = numberOfSales + 1000;
+logBookData();
 
 // --^-- write your code here --^--
