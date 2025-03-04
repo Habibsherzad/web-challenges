@@ -5,9 +5,24 @@ const addButton = document.querySelector('[data-js="add-button"]');
 const clearButton = document.querySelector('[data-js="clear-button"]');
 
 addButton.addEventListener("click", () => {
-  // Exercise: Append a new entry to the toast messages container
+  // Not necessary for the challenge, just adding some flavor.
+  const date = new Date().toDateString();
+  const message = `A new message! Received at: ${date}`;
+
+  addToast(message);
 });
 
 clearButton.addEventListener("click", () => {
-  // Exercise: Clear the stack of toast messages
+  clearToasts();
 });
+
+function clearToasts() {
+  toastContainer.innerHTML = "";
+}
+
+function addToast(message) {
+  const toast = document.createElement("li");
+  toast.classList.add("toast-container__message");
+  toast.textContent = message;
+  toastContainer.append(toast);
+}
