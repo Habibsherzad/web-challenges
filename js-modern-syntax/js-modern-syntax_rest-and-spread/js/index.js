@@ -2,60 +2,68 @@ console.clear();
 
 /*
 EXERCISE 1
-a) Destructure the `person` object and extract the variables `age` and `contact`.
-b) Use the rest parameter to collect the values of `name`, `email`, and `phone`
-   and put them into `contact`.
-c) Make sure to export your variable as shown in the example below to make the tests work.
+Use array destructuring to extract the variables `name`, `price`, and `quantity`.
+Make sure to export your variable as shown in the example below to make the tests work.
 */
 
-const person = {
-  name: "Jane Doe",
-  age: 32,
-  email: "jane@doe.com",
-  phone: "12345",
-};
+const item = ["Egg", 0.25, 12];
 
-// Example: export const { value 1 } = myObject;
+export const [name, price, quantity] = item;
+
+// Example: export const [ value1, value2 ] = array;
 
 /*
 EXERCISE 2
-Use array destructuring to extract the variables `first` and `second`;
-all other items should go into a variable called `restOfList`.
+Use array destructuring to extract the variables `firstNameOfChris`, `lastNameOfChris` and `ageOfChris`.
 */
 
-const list = ["one", "two", "three", "four", "five"];
+const personChris = [12, "Chris", "Owen"];
+
+export const [ageOfChris, firstNameOfChris, lastNameOfChris] = personChris;
 
 /*
 EXERCISE 3
-a) The `add` function does not work because it needs an array as an argument.
-b) Use the rest syntax with the `allNumbers` parameter to fix it.
-c) Make sure you understand what the rest syntax does here.
-d) Note that the optional chaining `?.` is used to prevent an error from occuring.
+Use array destructuring to extract the variables `firstNameOfAlex` and `lastNameOfAlex`.
+Ensure no unused variables remain.
 */
 
-function add(allNumbers) {
-  return allNumbers.reduce?.((a, b) => a + b);
-}
+const personAlex = ["Alex", 12, "Main"];
 
-export const sum = add(3, 2, 3, 2, 1, 2, 3, 4);
+export const [firstNameOfAlex, , lastNameOfAlex] = personAlex;
 
 /*
 EXERCISE 4
-a) Below, the `add` function is called with an array as an argument.
-b) Use the spread syntax with the `numbers` argument to fix this.
-c) Make sure you understand what the spread syntax does here.
+Use array destructuring to extract the last name from the array
+as variable called `lastName`.
 */
 
-const numbers = [3, 2, 1];
-export const result = add(numbers);
+const students = ["Christina", "Jon", "Alexandare"];
+
+export const [, , lastName] = students; // This works if we know the array size beforehand.
 
 /*
 EXERCISE 5
-a) Create a variable `allFruits` which combines `anotherFruit` and `fruits`
-   into a single array (in this order).
-b) Use the spread syntax to achieve this.
-c) Remember to export `allFruits`.
+Use array destructuring to extract all names from the nested array `nestedStudents`.
+Assign each name to a variable called "student1" through "student5", in the given order.
 */
 
-const fruits = ["apple", "banana", "orange", "papaya"];
-const anotherFruit = "cherry";
+const nestedStudents = ["Chris", ["Ahmad", "Antigoni"], ["Toby", "Sam"]];
+
+export const [student1, [student2, student3], [student4, student5]] =
+  nestedStudents;
+
+/*
+EXERCISE 6
+Spread the values of the `values` array into the function call of the `add` function.
+Keep in mind that you need to export the variable `result` to make the test work.
+*/
+
+const values = [1, 6, 7, 9, 12, 5, 4];
+
+export const result = add(...values); // Spread values inside this function call
+
+function add(...values) {
+  return values.reduce(
+    (previousValue, currentValue) => previousValue + currentValue
+  );
+}
